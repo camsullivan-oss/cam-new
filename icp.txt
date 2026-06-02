@@ -1,35 +1,71 @@
-# ICP Definition for Applitools
-# Replace this file with your actual ICP criteria.
-# The briefing AI will reference this when evaluating fit.
+# Applitools Ideal Customer Profile (ICP)
+# Used by the pre-meeting briefing AI to assess account fit.
 
-## Ideal Customer Profile
+## Core Question
+What is the PRIMARY purpose of the customer's website or app?
+- If it presents information, brand, or content → likely STRONG FIT
+- If it is primarily transactional (e.g. e-commerce purchasing flow) → NOT our ICP
+- If it is an internal enterprise platform → NOT our ICP
 
-### Company Size
-- 500–10,000 employees (mid-market to enterprise)
-- Engineering org of 50+ developers
+## Target Industries (Priority Order)
+1. Financial Services & Banking — major banks, insurance, fintech, payment processors
+2. Healthcare & Life Sciences — pharma, medical devices, health tech platforms
+3. Media, Entertainment & Publishing — streaming, news/media, gaming, publishers
+4. Technology & Software — large tech companies and specialized SaaS providers
+5. Government & Public Sector
+6. Education
+7. Energy & Utilities
+8. Telecommunications
+9. Automotive & Transportation
 
-### Industries
-- Financial services / Fintech
-- Healthcare / MedTech
-- E-commerce / Retail
-- Insurance
-- Travel & Hospitality
-- Government / Public Sector (large contracts)
+## Target Personas (WHO we sell to)
+- Developers and SDETs (Codefull): build and maintain automated tests in CI/CD pipelines
+- Automation Engineers / Low-code/No-code test automation users (Codeless): design and manage large automation frameworks
+- NOT: manual testers
 
-### Technology Signals
-- Active web/mobile application development
-- CI/CD pipeline in use (Jenkins, GitHub Actions, CircleCI, etc.)
-- Selenium or Cypress already in their stack
-- Agile/DevOps teams
+## Strongest Fit Signals
 
-### Business Signals
-- Known pain: visual regression bugs reaching production
-- High release velocity (weekly or more frequent deploys)
-- QA team ratio: 1 QA per 5–10 devs
-- Recent digital transformation initiative
+### Content-Rich Websites (Codefull + Codeless)
+Strong fit if the site has most of these:
+- Rich visual content — many images, videos
+- Dynamic content that changes frequently
+- Multiple languages and locales
+- Templates reused across multiple pages / brands / domains
+- Brand consistency requirements across many properties
+- CMS-driven (Adobe Experience Manager, WordPress, Drupal, Sitecore) → STRONG INDICATOR
+- Some interactive elements (forms, flows) but NOT primarily transactional
 
-### Negative Signals (disqualifiers)
-- Less than 100 employees
-- No active front-end application (backend-only)
-- Budget < $50k/year
-- No QA practice at all
+Strong fit examples: media websites, corporate websites, brand websites, marketing sites, information portals
+
+### Native Mobile Applications (Codefull)
+Strong fit if:
+- Consumer-facing brand or media app
+- Financial services app
+- Needs visual consistency across devices, OS versions, screen sizes
+
+## ICP Examples (STRONG FIT)
+- New York Times (nytimes.com) — content platform, templated, brand-consistent
+- Chase Bank (chase.com) — financial services digital front door
+- Johnson & Johnson (jnj.com) — healthcare brand/content site
+- Condé Nast — media/publishing
+
+## Outside ICP (Weak Fit / Disqualify)
+- E-commerce focused sites where purchasing flows dominate (Nike, American Eagle)
+- Single Page Applications that are NOT content-rich (e.g. eyes.applitools.com itself)
+- Internal enterprise platforms: Workday, Oracle, SAP, Salesforce, Microsoft Dynamics
+- Primarily backend/API-driven systems with no meaningful front-end
+
+## ICP Validation Data
+- 67% of top healthy customers align with ICP
+- Only 28% of churned customers fit ICP — misalignment is a leading churn predictor
+- EMEA: low ICP alignment even in healthy customers — flag EMEA deals for extra scrutiny
+- APAC: 100% healthy customer ICP alignment — strong signal, prioritize
+- US: 90% healthy customer ICP alignment
+
+## What We Test
+- Visual Regression + Functional Assertions
+- Accessibility Testing
+- Component Testing (Storybook / Eyes)
+- Native Mobile Testing
+- Design Testing (design-to-code validation)
+- NOT: Performance testing, end-to-end API testing, test management
