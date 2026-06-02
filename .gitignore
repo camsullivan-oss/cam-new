@@ -1,0 +1,9 @@
+.env
+credentials.json
+token.json
+.briefings_sent.json
+briefing.log
+venv/
+__pycache__/
+*.pyc
+.DS_Store

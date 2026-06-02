@@ -1,0 +1,35 @@
+# ICP Definition for Applitools
+# Replace this file with your actual ICP criteria.
+# The briefing AI will reference this when evaluating fit.
+
+## Ideal Customer Profile
+
+### Company Size
+- 500–10,000 employees (mid-market to enterprise)
+- Engineering org of 50+ developers
+
+### Industries
+- Financial services / Fintech
+- Healthcare / MedTech
+- E-commerce / Retail
+- Insurance
+- Travel & Hospitality
+- Government / Public Sector (large contracts)
+
+### Technology Signals
+- Active web/mobile application development
+- CI/CD pipeline in use (Jenkins, GitHub Actions, CircleCI, etc.)
+- Selenium or Cypress already in their stack
+- Agile/DevOps teams
+
+### Business Signals
+- Known pain: visual regression bugs reaching production
+- High release velocity (weekly or more frequent deploys)
+- QA team ratio: 1 QA per 5–10 devs
+- Recent digital transformation initiative
+
+### Negative Signals (disqualifiers)
+- Less than 100 employees
+- No active front-end application (backend-only)
+- Budget < $50k/year
+- No QA practice at all
