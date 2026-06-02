@@ -39,7 +39,7 @@ def get_account_data(company_name: str, contact_emails: list[str]) -> dict:
     if not account:
         result = sf.query(
             f"SELECT Id, Name, Industry, NumberOfEmployees, AnnualRevenue, "
-            f"Website, BillingCountry, Type, OwnerId "
+            f"Website, BillingCountry, Type, OwnerId, Owner.Email, Owner.Name "
             f"FROM Account WHERE Name LIKE '%{company_name}%' LIMIT 1"
         )
         if result["records"]:

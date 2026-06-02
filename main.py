@@ -43,7 +43,8 @@ def process_meeting(meeting: dict):
         news=news,
     )
 
-    send_briefing(briefing, meeting["title"], company_name)
+    owner_email = sfdc_data.get("account", {}).get("Owner", {}).get("Email") if sfdc_data.get("found") else None
+    send_briefing(briefing, meeting["title"], company_name, owner_email=owner_email)
     mark_sent(meeting["id"])
     print(f"Done: {meeting['title']}")
 
